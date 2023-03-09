@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const testControllers = require('../controllers/api/test');
+const { saveItem } = require('../controllers/api/items');
 
-router.get('/', testControllers);
+router.get('/', saveItem);
 
 module.exports = router;

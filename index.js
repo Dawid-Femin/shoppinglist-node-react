@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const { PORT } = require('./config');
 
+//Database connection
+require('./database/mongoose');
+
 //Routes
 const apiRouter = require('./routes/api');
 
