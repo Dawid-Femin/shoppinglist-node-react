@@ -1,0 +1,14 @@
+{
+  "name": "shopping-list",
+  "version": "1.0.0",
+  "description": "Simple shopping list based od Node, React and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dawid Femin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
