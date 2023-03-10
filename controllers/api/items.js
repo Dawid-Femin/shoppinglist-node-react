@@ -1,15 +1,26 @@
 const SingleItem = require('../../database/models/item');
 
 module.exports = {
-    saveItem(req, res) {
-    const newItem = new SingleItem({
-            name: 'New record 3',
-            quantity: 1
-        });
+    getAllItems(req, res) {
+        res.send('API getAllElements working');
+    },
 
-        newItem.save()
-        .then(() => {
-            console.log('the product has been added');
-        });
-    }
+    getItem(req, res) {
+        res.send('API getItem working');
+    },
+
+    addItem(req, res) {
+        const name = req.body.name;
+        const quantity = req.body.quantity;
+        res.send(`Item: ${name}, Quantity: ${quantity}`);
+    },
+
+    editItem(req, res) {
+        res.send('API editItem working');
+    },
+
+    deleteItem(req, res) {
+        const id = req.params.id;
+        res.send('API deleteItem working');
+    },
 }
