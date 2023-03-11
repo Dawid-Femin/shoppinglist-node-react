@@ -1,8 +1,16 @@
 const mongoose = require('mongoose');
 
-const SingleItem = mongoose.model('singleItem', {
-    name: String,
-    quantity: Number,
+const ItemSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    quantity: {
+        type: Number,
+        required: true
+    }
 });
+
+const SingleItem = mongoose.model('singleItem', ItemSchema);
 
 module.exports = SingleItem;
